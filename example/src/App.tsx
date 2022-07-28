@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { ExampleComponent } from '@huelet/pencil.js'
+import { Editor } from '@huelet/pencil.js'
 import '@huelet/pencil.js/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [value, setValue] = React.useState('')
+  return <Editor value={value} onChange={setValue} />
 }
 
 export default App

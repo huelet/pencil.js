@@ -1,17 +1,7 @@
-/**
- * Default CSS definition for typescript,
- * will be overridden with file-specific definitions by rollup
- */
-declare module '*.css' {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
-
-declare module '*.svg' {
-  const svgUrl: string;
-  const svgComponent: SvgrComponent;
-  export default svgUrl;
-  export { svgComponent as ReactComponent }
-}
+export declare function Editor(
+  value: string,
+  onChange: (value: string) => void,
+  placeholder?: string,
+  disableMarkdown?: boolean,
+  forcePreviewDisabled?: boolean
+): JSX.Element
