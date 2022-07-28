@@ -7,24 +7,26 @@
 ## Install
 
 ```bash
-npm install --save @huelet/pencil.js
+yarn add @huelet/pencil.js
 ```
 
-## Usage
+## Basic Usage
+
+Without any options, the component will render a styled textarea.
 
 ```tsx
-import React, { Component } from 'react'
+import { Editor } from "@huelet/pencil.js";
 
-import MyComponent from '@huelet/pencil.js'
-import '@huelet/pencil.js/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
+const App = () => (
+  <Editor
+    value="Hello, world!"
+    onChange={value => console.log(value)}
+  />
+);
 ```
+Full documentation is available in the [wiki](https://github.com/huelet/pencil.js/wiki).
 
 ## License
 
-GPL-3.0 © [lerichardson](https://github.com/lerichardson)
+GPL-3.0 © [Levi R.](https://github.com/lerichardson) and contributors
+```
